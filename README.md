@@ -1,109 +1,62 @@
-# Uniswap V4 Development Book
+# Uniswap v4 Development Book
 
-🚧🚧🚧🚧🚧🚧🚧🚧🚧 🚨 🚧🚧🚧🚧🚧🚧🚧🚧🚧 🚨 🚧🚧🚧🚧🚧🚧🚧🚧🚧 
+A concise, practical guide to developing and understanding Uniswap v4.
 
-🚧🚧🚧🚧🚧🚧🚧🚧🚧&nbsp;&nbsp;&nbsp;&nbsp;WORK IN PROGRESS&nbsp;&nbsp;&nbsp;&nbsp;🚧🚧🚧🚧🚧🚧🚧🚧🚧
+## About
 
-🚧🚧🚧🚧🚧🚧🚧🚧🚧 🚨 🚧🚧🚧🚧🚧🚧🚧🚧🚧 🚨 🚧🚧🚧🚧🚧🚧🚧🚧🚧 
+This repository provides developers with comprehensive resources, explanations, and practical examples for working with Uniswap v4.
 
-## Preliminary Table of Contents
-0. Introduction
-  - How Markets Work
-    - [ ] Copy from V3, improve smth
-  - Constant Function Market Maker
-    - [ ] Copy from V3, improve smth
-  - Concentrated Liquidity
-    - [ ] Tell about the innovation V3 brings
-  - Uniswap V4
-    - [ ] Tell what V4 brings (more engineering, actions grouping, single contract, hooks)
-  - Development Environment
-    - [ ] Maybe some more info about Ethereum (e.g. some illustrations)
-    - [ ] Focus on Foundry/Forge only
-  - What We'll Build
-    - [ ] Copy from V3, improve smth
+## Table of Contents
 
-1. Providing Liquidity
-  - Introduction
-    - [ ] Copy from V3, improve smth
-  - Calculating Liquidity
-    - [ ] Copy from V3, improve smth
-  - Providing Liquidity
-    - [ ] Copy from V3, improve smth
-    - [ ] Use `PoolManager` as the contract, but store only 1 pool
-    - [ ] Skip unlock/deltas for now
-  - Accounting
-    - [ ] Unlock (sequence diagram)
-    - [ ] Deltas tracking
-    - [ ] Finished liquidity provision (settle debt)
-  - Ticks Indexing
-    - [ ] Copy from Tick Bitmap Index
-    - [ ] Copy from Generalized Minting
-    - [ ] Improve illustrations and probably rewrite
-    - [ ] Improve wording, mention the LE implementation (there was a lot of confusion)
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Directory Structure](#directory-structure)
+- [How to Use](#how-to-use)
+- [Contributing](#contributing)
+- [License](#license)
 
-2. Swapping
-  - Introduction
-    - [ ] Copy from V3, improve smth
-  - First Swap
-    - [ ] Copy from V3, improve smth
-    - [ ] Maybe not necessary (go to amt calc right away and then implement swap)
-  - Output Amount Calculation
-    - [ ] Copy from V3, improve smth
-    - [ ] Add Math in Solidity
-  - Finished Swapping
-    - [ ] Copy from Generalized Swapping
-    - [ ] Better title, should finish First Swap
-    - [ ] Settle debt, take credit
-  - Deployment
-    - [ ] Copy from V3, improve smth
+## Introduction
 
-3. Cross-position Swapping
-  - Introduction
-    - [ ] Copy from V3, improve smth
-  - Different Price Ranges
-    - [ ] Copy from V3, improve smth
-  - Cross-tick Swaps
-    - [ ] Copy from V3, improve smth
-  - Slippage Protection
-    - [ ] Copy from V3, improve smth
-  - Liquidity Calculation
-    - [ ] Copy from V3, improve smth
-  - A Little Bit More on Fixed-Point Numbers
-    - [ ] Copy from V3, improve smth
+Uniswap v4 is the latest evolution of the Uniswap protocol, offering new features and improvements for decentralized exchanges. This book aims to simplify the learning curve and help developers quickly get started building on Uniswap v4.
 
-4. Multi-pool Swapping
-  - Introduction
-    - [ ] Copy from V3, improve smth
-  - Multiple Pools in One Contract
-    - [ ] Upgrade PoolManager to support multiple pools
-    - [ ] Add/upgrade `initialize()`
-  - Router Contract
-    - [ ] Build a basic router
-    - [ ] Use the router for multi-pool swaps
-    - [ ] Settle/take via the router
-  - Tick Rounding
-    - [ ] Check if still needed, maybe merge with a previous subchapter
+## Getting Started
 
-5. Swap and Protocol Fees
-  - Introduction
-    - [ ] Copy from V3, improve smth
-  - Swap Fees
-    - [ ] Likely full rework
-  - Protocol Fees
-    - [ ] Copy from V3, improve smth
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/TartarusDevtech/uniswapv4-development-book.git
+   ```
+2. **Navigate into the directory**
+   ```sh
+   cd uniswapv4-development-book
+   ```
+3. **Explore the content**
+   - Read the introductory chapters
+   - Follow along with code examples and explanations
 
-6. Hooks
-  - Introduction
-    - [ ] Why hooks are needed
-    - [ ] Hook examples (https://github.com/ora-io/awesome-uniswap-hooks)
-  - How Hooks Work
-    - [ ] Pre/post
-  - Hook Contract Address Generation
-    - [ ] Security (hook address commits to pool id)
-  - Adding Hooks
-    - [ ] Static hooks
-    - [ ] Hooks that modify swap/liquidity amounts
-  - Dynamic LP Fees
+## Directory Structure
 
-7. Periphery Contracts
-  - [ ] Probably just an overview of important contracts (PM, Quoter)
+```
+uniswapv4-development-book/
+├── chapters/
+│   └── ...        # Chapter-wise guides and explanations
+├── examples/
+│   └── ...        # Practical Uniswap v4 code examples
+├── scripts/
+│   └── ...        # Utility scripts and tools
+├── README.md
+└── ...
+```
+
+## How to Use
+
+- Browse the `chapters/` directory for learning material.
+- Check the `examples/` directory for hands-on code samples.
+- Use the `scripts/` directory for additional tools and automation.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or pull request if you would like to suggest improvements or add new content.
+
+## License
+
+This project is licensed under the MIT License.
